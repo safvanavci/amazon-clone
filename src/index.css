@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.slick-next::before{
+    display: none !important;
+}
+.slick-prev::before{
+    display: none !important;
+}
+.slick-slider{
+    min-height: 600px;
+}

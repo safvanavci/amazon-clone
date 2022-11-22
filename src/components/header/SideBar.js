@@ -13,10 +13,10 @@ export default function SideBar() {
     <>
       <div
         onClick={() => dispatch(showSidebar())}
-        className={`absolute top-0 w-screen h-screen bg-[#000]/80 ${outside}`}
+        className={`absolute top-0 w-screen h-screen bg-[#000]/80 z-40 ${outside}`}
       ></div>
       <div
-        className={`${side} absolute  w-[365px] h-screen top-0 bg-white transition-all duration-300`}
+        className={`${side} absolute  w-[365px] h-screen z-50 top-0 bg-white transition-all duration-300`}
       >
         <div className="bg-gray h-[50px] px-[36px] text-white flex gap-x-3 items-center cursor-pointer relative">
           <FaUserCircle size={27} />
