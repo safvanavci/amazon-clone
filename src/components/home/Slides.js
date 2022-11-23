@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <button
-      className="absolute top-[2px] right-0 w-[80px] h-[250px]  border-transparent flex items-center justify-center rounded-sm focus:border-[#398396] outline-white outline-2 focus:outline focus:border-2"
+      className="absolute z-10 top-[2px] right-0 w-[80px] h-[250px]  border-transparent flex items-center justify-center rounded-sm focus:border-[#398396] outline-white outline-2 focus:outline focus:border-2"
       onClick={onClick}
     >
       <GrNext size={40} />
@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
 
 export default function Slides() {
   return (
-    <>
+    <div className="relative">
       <Slider {...settings}>
         <div>
           <img
@@ -78,6 +78,6 @@ export default function Slides() {
         </div>
       </Slider>
       <div className="w-full h-1/2 absolute bottom-0 bg-gradient-to-t from-[#eaeded] to-white/.8"></div>
-    </>
+    </div>
   );
 }
