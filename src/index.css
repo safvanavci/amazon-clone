@@ -4,6 +4,16 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+@layer components {
+    .sidebar-arrow {
+      @apply text-[#879596] group-hover:text-black text-[20px]
+    }
+    .sidebar-category {
+        @apply text-[14px] pl-[36px] py-[13px] pr-[20px] cursor-pointer flex justify-between items-center hover:bg-lightGray
+    }
+
+  }
+
 .slick-next::before{
     display: none !important;
 }

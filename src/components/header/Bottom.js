@@ -1,7 +1,7 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { showSidebar } from "../../redux/slices/SidebarSlice";
 import { useDispatch } from "react-redux";
-import SideBar from "./SideBar";
+import SideBar from "./sidebar/SideBar";
 
 export default function Bottom() {
   const dispatch = useDispatch();
