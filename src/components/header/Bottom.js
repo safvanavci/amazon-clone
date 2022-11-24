@@ -34,7 +34,7 @@ export default function Bottom() {
           </div>
         </div>
         <div>
-          <div className="flex gap-x-1 items-center h-7 border border-black  hover:border-white rounded-sm py-2 px-[8px] font-bold">
+          <div className="flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px] font-bold">
             Shop great deals now
           </div>
         </div>

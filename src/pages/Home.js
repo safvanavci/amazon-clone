@@ -1,4 +1,5 @@
-import Cards from "../components/home/Cards";
+import Cards from "../components/home/cards/Cards";
+import Sections from "../components/home/sections/Sections";
 import Slides from "../components/home/Slides";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Cards />
       </div>
       <div className="h-[500px]"></div>
+      <Sections/>
     </div>
   );
 }

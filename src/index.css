@@ -4,22 +4,35 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-@layer components {
-    .sidebar-arrow {
-      @apply text-[#879596] group-hover:text-black text-[20px]
-    }
-    .sidebar-category {
-        @apply text-[14px] pl-[36px] py-[13px] pr-[20px] cursor-pointer flex justify-between items-center hover:bg-lightGray
-    }
-
+@layer base {
+  section {
+    @apply h-[280px] w-full bg-white px-[20px] py-[10px];
   }
+}
+@layer components {
+  .sidebar-arrow {
+    @apply text-[#879596] group-hover:text-black text-[20px];
+  }
+  .sidebar-category {
+    @apply text-[14px] pl-[36px] py-[13px] pr-[20px] cursor-pointer flex justify-between items-center hover:bg-lightGray;
+  }
+  .card-link {
+    @apply absolute bottom-[20px] w-[310px] text-[13px] text-green hover:text-orange hover:underline;
+  }
+  .home-cards {
+    @apply w-[350px] h-[420px] px-[20px] py-[20px] bg-white relative;
+  }
+  .home-cards-head {
+    @apply text-[21px] font-bold mb-3 leading-[29px];
+  }
+}
 
-.slick-next::before{
-    display: none !important;
+.slick-next::before {
+  display: none !important;
 }
-.slick-prev::before{
-    display: none !important;
+.slick-prev::before {
+  display: none !important;
 }
-.slick-slider{
-    min-height: 600px;
+.slick-slider {
+  min-height: 600px;
 }
