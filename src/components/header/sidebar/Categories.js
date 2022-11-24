@@ -20,7 +20,7 @@ export default function Categories() {
           <p> Mens Shirts</p>
           <IoIosArrowForward className="sidebar-arrow" />
         </Link>
-        <Link to={"categorymens-shoes/"} className="sidebar-category group">
+        <Link to={"category/mens-shoes"} className="sidebar-category group">
           <p> Mens Shoes</p>
           <IoIosArrowForward className="sidebar-arrow" />
         </Link>

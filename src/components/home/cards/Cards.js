@@ -14,7 +14,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">Top Deal</h1>
         <Tops />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/tops"}>
           <p>See all deals</p>
         </Link>
       </div>
@@ -30,7 +30,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">Health & Personal Care</h1>
         <Skincare />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/skincare"}>
           <p>Shop now</p>
         </Link>
       </div>
@@ -48,7 +48,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">Electronics</h1>
         <Electronics />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/laptops"}>
           <p>See more</p>
         </Link>
       </div>
@@ -56,7 +56,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">T-shirts</h1>
         <Tshirt />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/mens-shirts"}>
           <p>See more</p>
         </Link>
       </div>
@@ -64,7 +64,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">Home</h1>
         <Home />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/home-decoration"}>
           <p>See more</p>
         </Link>
       </div>
@@ -72,7 +72,7 @@ export default function Cards() {
       <div className="home-cards">
         <h1 className=" home-cards-head">Dresses</h1>
         <Dresses />
-        <Link className="card-link">
+        <Link className="card-link" to={"category/womens-dresses"}>
           <p>See more</p>
         </Link>
       </div>

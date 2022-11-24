@@ -3,14 +3,17 @@ import { FiShoppingCart } from "react-icons/fi";
 import { AiFillCaretDown } from "react-icons/ai";
 import Search from "./Search";
 import Bottom from "./Bottom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
       <div className="h-[60px] bg-black text-white flex gap-x-2 clear-both px-4 items-center">
-        <div className="w-[113px] h-[50px] flex  items-center border border-black  hover:border-white pt-[5px] pr-[10px] pl-[5px] rounded-sm  ">
-          <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
-        </div>
+        <Link to="/">
+          <div className="w-[113px] h-[50px] flex  items-center border border-black  hover:border-white pt-[5px] pr-[10px] pl-[5px] rounded-sm  ">
+            <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
+          </div>
+        </Link>
         <div className="h-[50px] flex items-center border border-black  hover:border-white rounded-sm text-xs font-normal pl-[3px] pr-[9px] ">
           <HiOutlineLocationMarker size={19} className="mt-2 mr-[1px]" />
           <div>
