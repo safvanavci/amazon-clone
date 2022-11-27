@@ -46,6 +46,9 @@
   .h3-wf {
     @apply h-[300px] w-full;
   }
+  .fc {
+    @apply flex flex-col;
+  }
 }
 
 .slick-next::before {

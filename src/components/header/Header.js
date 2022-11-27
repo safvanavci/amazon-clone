@@ -37,14 +37,14 @@ export default function Header() {
           <AiFillCaretDown color="gray" size={10} />
         </div>
 
-        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex flex-col justify-center px-2">
+        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex  flex-col justify-center px-2">
           <div className=" text-xs leading-none">Hello, sign in</div>
           <div className=" text-sm flex items-center font-bold">
             Account & Lists <AiFillCaretDown color="gray" size={10} />
           </div>
         </div>
 
-        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex flex-col justify-center px-2">
+        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex  flex-col justify-center px-2">
           <div className=" text-xs leading-none">Returns</div>
           <div className=" text-sm items-center font-bold">& Orders</div>
         </div>

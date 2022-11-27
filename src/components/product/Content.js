@@ -25,12 +25,12 @@ export default function Content({ datas }) {
           {datas.price}
         </p>
         <div className="flex gap-x-9 text-[14px] mt-5">
-          <div className="w-fit font-bold flex flex-col gap-y-3">
+          <div className="w-fit font-bold fc gap-y-3">
             <h1>Brand</h1>
             <h1>Category</h1>
             <h1>Stock</h1>
           </div>
-          <div className="flex flex-col gap-y-3">
+          <div className="fc gap-y-3">
             <h1>{datas.brand}</h1>
             <h1>{datas.category}</h1>
             <h1>{datas.stock}</h1>

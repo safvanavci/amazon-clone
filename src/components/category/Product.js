@@ -15,7 +15,7 @@ export default function Product({ data }) {
           />
         </div>
       </Link>
-      <div className="flex flex-col py-6 px-2">
+      <div className="fc py-6 px-2">
         <Link to={`/product/${data.id}`}>
           <p className="text-[16px] leading-[24px] hover:text-[#c45500]">
             {data.description}

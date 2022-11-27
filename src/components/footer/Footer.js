@@ -19,7 +19,7 @@ export default function Footer() {
           <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
         </div>
       </div>
-      <div className="h-[300px] bg-[#131a23] text-[12px] flex flex-col items-center justify-center">
+      <div className="h-[300px] bg-[#131a23] text-[12px] fc items-center justify-center">
         <div className="flex gap-x-5">
           <p>Conditions of Use</p>
           <p>Privacy Notice</p>

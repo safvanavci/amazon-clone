@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center py-5">
+    <div className="fc items-center py-5">
       <a href="/">
         <img
           src="https://images-na.ssl-images-amazon.com/images/G/01/error/title._TTD_.png"
