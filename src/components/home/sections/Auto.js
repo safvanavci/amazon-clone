@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function Spotlight() {
+export default function Auto() {
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Spotlight() {
       <div className="w-full overflow-x-auto">
         <div className="flex w-fit gap-20">
           {datas?.map((data) => (
-            <Link to={`/product/${data.id}`}>
+            <Link key={data.id} to={`/product/${data.id}`}>
               <div className="w-[200px] h-[200px] " key={data.id}>
                 <img
                   src={data.thumbnail}
