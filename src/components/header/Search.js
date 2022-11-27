@@ -1,33 +1,58 @@
 import { useDispatch, useSelector } from "react-redux";
 import { outlineShow } from "../../redux/slices/OutlineSlice";
 import { BsSearch } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Search() {
-    
   const dispatch = useDispatch();
   const value = useSelector((state) => state.outline.value);
+  const [first, setfirst] = useState("");
+  const [datas, setDatas] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://dummyjson.com/products/search?q=${first}`)
+      .then((res) => setDatas(res.data.products));
+  }, [first]);
 
   return (
-    <div
-      className={`h-[45px] flex border-transparan border-[3px] rounded-md flex-1 overflow-hidden text-black mx-[10px] ${value}`}
-    >
-      <select
-        name=""
-        id=""
-        className="w-fit cursor-pointer outline-none bg-light border-r border-gray/20 text-center text-xs"
+    <div className="relative flex-1 ">
+      <div
+        className={`h-[45px] flex border-transparan border-[3px] rounded-md overflow-hidden text-black mx-[10px] ${value}`}
       >
-        <option value="">All</option>
-        <option value="">selam</option>
-        <option value="">deneme</option>
-      </select>
-      <input
-        type="text"
-        className="peer h-full w-full outline-none p-2"
-        onFocus={() => dispatch(outlineShow())}
-        onBlur={() => dispatch(outlineShow())}
-      />
-      <div className="bg-[#f4bd6a] w-[45px] flex items-center justify-center hover:bg-orange">
-        <BsSearch size={20} />
+        <select
+          name=""
+          id=""
+          className="w-[60px] cursor-pointer outline-none bg-light border-r border-gray/20 text-center text-xs"
+        >
+          <option value="">All</option>
+        </select>
+        <input
+          type="text"
+          className="peer h-full w-full outline-none p-2"
+          onFocus={() => dispatch(outlineShow())}
+          onBlur={() => dispatch(outlineShow())}
+          value={first}
+          onChange={(e) => setfirst(e.target.value)}
+        />
+        <div className="bg-[#f4bd6a] w-[45px] flex items-center justify-center hover:bg-orange">
+          <BsSearch size={20} />
+        </div>
+      </div>
+      <div className="absolute right-[14px] top-[42px]  text-black w-full pl-[82px] z-50 ">
+        {first === "" ? (
+          ""
+        ) : (
+          <div className="bg-white border-t">
+            {datas?.map((data) => (
+              <Link to={`/product/${data.id}`} key={data.id} onClick={()=>setfirst("")}>
+                <div className="p-[7px] hover:bg-lightGray">{data.title}</div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

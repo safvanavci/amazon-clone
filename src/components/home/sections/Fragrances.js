@@ -17,8 +17,8 @@ export default function Fragrances() {
       <div className="w-full overflow-x-auto">
         <div className="flex w-fit gap-20">
           {datas?.map((data) => (
-            <Link to={`/product/${data.id}`}>
-              <div className="w-[200px] h-[200px] " key={data.id}>
+            <Link  key={data.id} to={`/product/${data.id}`}>
+              <div className="w-[200px] h-[200px] ">
                 <img
                   src={data.thumbnail}
                   alt=""
