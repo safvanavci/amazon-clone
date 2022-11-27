@@ -19,7 +19,6 @@ export default function Category() {
 
   return (
     <div className="flex w-fit mx-auto py-5">
-      <div className="min-w-[279px]">sa</div>
       <div className="max-w-[1500px]">
         <h1 className="text-[20px] mb-2">RESULTS</h1>
         <div className="flex flex-wrap gap-2">

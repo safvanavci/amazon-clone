@@ -4,8 +4,11 @@ import { AiFillCaretDown } from "react-icons/ai";
 import Search from "./Search";
 import Bottom from "./Bottom";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const items = useSelector((state) => state.basket.items);
+
   return (
     <>
       <div className="h-[60px] bg-black text-white flex gap-x-2 clear-both px-4 items-center">
@@ -46,7 +49,7 @@ export default function Header() {
         <Link to="/basket">
           <div className="flex items-end h-[50px] border border-black  hover:border-white rounded-sm px-2 py-2 relative">
             <span className="text-orange text-[20px] leading-none font-bold absolute top-1 left-6 bg-black">
-              0
+              {items.length}
             </span>
             <FiShoppingCart size={35} />
             <div className=" text-sm items-center font-bold">Cart</div>
