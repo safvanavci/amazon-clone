@@ -9,7 +9,7 @@ export default function Home() {
         <Slides />
         <Cards />
       </div>
-      <div className="h-[500px]"></div>
+      <div className="xl:h-[500px] h-[100px]"></div>
       <Sections/>
     </div>
   );

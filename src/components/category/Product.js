@@ -5,7 +5,7 @@ export default function Product({ data }) {
   const date = new Date();
 
   return (
-    <div className="w-[291px] border border-light rounded-sm">
+    <div className="w-[291px] border border-light rounded-sm mx-auto">
       <Link to={`/product/${data.id}`}>
         <div className="w-[273px] h-[273px] bg-[#f9f9f9]">
           <img

@@ -10,8 +10,8 @@ import Tshirt from "./Tshirt";
 
 export default function Cards() {
   return (
-    <div className="hidden absolute top-[41%] w-full md:flex gap-y-6 justify-evenly flex-wrap">
-      <div className="home-cards">
+    <div className="absolute top-[41%] w-full md:flex gap-y-6 justify-evenly flex-wrap">
+      <div className="home-cards hidden md:block">
         <h1 className=" home-cards-head">Top Deal</h1>
         <Tops />
         <Link className="card-link" to={"category/tops"}>
@@ -19,7 +19,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards mx-auto md:mx-0">
         <h1 className=" home-cards-head">Shop by Category</h1>
         <Category />
         <Link className="card-link">
@@ -27,7 +27,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards hidden xl:block">
         <h1 className=" home-cards-head">Health & Personal Care</h1>
         <Skincare />
         <Link className="card-link" to={"category/skincare"}>
@@ -35,7 +35,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="w-[350px] h-[420px]">
+      <div className="w-[350px] h-[420px] hidden lg:block">
         <Sign />
         <div className="pt-6 flex justify-center">
           <img
@@ -45,7 +45,7 @@ export default function Cards() {
         </div>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards hidden xl:block">
         <h1 className=" home-cards-head">Electronics</h1>
         <Electronics />
         <Link className="card-link" to={"category/laptops"}>
@@ -53,7 +53,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards hidden xl:block">
         <h1 className=" home-cards-head">T-shirts</h1>
         <Tshirt />
         <Link className="card-link" to={"category/mens-shirts"}>
@@ -61,7 +61,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards hidden 2xl:block">
         <h1 className=" home-cards-head">Home</h1>
         <Home />
         <Link className="card-link" to={"category/home-decoration"}>
@@ -69,7 +69,7 @@ export default function Cards() {
         </Link>
       </div>
 
-      <div className="home-cards">
+      <div className="home-cards hidden 2xl:block">
         <h1 className=" home-cards-head">Dresses</h1>
         <Dresses />
         <Link className="card-link" to={"category/womens-dresses"}>
