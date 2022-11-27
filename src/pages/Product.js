@@ -7,20 +7,43 @@ import Card from "../components/product/Card";
 export default function Product() {
   const params = useParams();
   const [datas, setDatas] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     axios
       .get(`https://dummyjson.com/products/${params.id}`)
-      .then((res) => setDatas(res.data));
+      .then((res) => setDatas(res.data))
+      .finally(() => setLoader(false));
   }, [params.id]);
 
   return (
-    <div className="max-w-[1464px] mx-auto flex py-[60px]">
-      <div>
-        <img src={datas.thumbnail} alt="" />
-      </div>
-      <Content datas={datas} />
-      <Card datas={datas} />
+    <div className="max-w-[1464px] mx-auto py-[60px]">
+      {loader ? (
+        <div className="h-[550px] flex items-center justify-center">
+          <div className="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      ) : (
+        <div className="flex">
+          <div>
+            <img src={datas.thumbnail} alt="" />
+          </div>
+          <Content datas={datas} />
+          <Card datas={datas} />
+        </div>
+      )}
     </div>
   );
 }
