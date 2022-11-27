@@ -31,7 +31,7 @@ export default function Search() {
         </select>
         <input
           type="text"
-          className="peer h-full w-full outline-none p-2"
+          className="peer hf-wf outline-none p-2"
           onFocus={() => dispatch(outlineShow())}
           onBlur={() => dispatch(outlineShow())}
           value={first}

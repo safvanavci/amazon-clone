@@ -36,7 +36,7 @@ export default function Product() {
           </div>
         </div>
       ) : (
-        <div className="flex">
+        <div className="flex flex-wrap">
           <div>
             <img src={datas.thumbnail} alt="" />
           </div>

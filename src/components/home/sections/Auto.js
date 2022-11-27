@@ -22,7 +22,7 @@ export default function Auto() {
                 <img
                   src={data.thumbnail}
                   alt=""
-                  className="w-full h-full object-contain"
+                  className=" hf-wf object-contain"
                 />
               </div>
             </Link>

@@ -5,7 +5,7 @@ export default function Categories() {
   return (
     <div className="overflow-x-auto h-full pb-[50px]">
       <div className="mt-[7px] border-b pb-[6px] border-lightGray">
-        <h1 className="text-[18px] font-bold pl-[36px] pt-[13px] pb-[5px]">
+        <h1 className="sidebar-category-head">
           Fashion
         </h1>
         <Link to={"category/womens-dresses"} className="sidebar-category group">
@@ -27,7 +27,7 @@ export default function Categories() {
       </div>
 
       <div className="mt-[7px] border-b pb-[6px] border-lightGray">
-        <h1 className="text-[18px] font-bold pl-[36px] pt-[13px] pb-[5px]">
+        <h1 className="sidebar-category-head">
           Electronic
         </h1>
         <Link to={"category/smartphones"} className="sidebar-category group">
@@ -41,7 +41,7 @@ export default function Categories() {
       </div>
 
       <div className="mt-[7px] border-b pb-[6px] border-lightGray">
-        <h1 className="text-[18px] font-bold pl-[36px] pt-[13px] pb-[5px]">
+        <h1 className="sidebar-category-head">
           Accessory
         </h1>
         <Link to={"category/mens-watches"} className="sidebar-category group">
@@ -70,7 +70,7 @@ export default function Categories() {
       </div>
 
       <div className="mt-[7px] border-b pb-[6px] border-lightGray">
-        <h1 className="text-[18px] font-bold pl-[36px] pt-[13px] pb-[5px]">
+        <h1 className="sidebar-category-head">
           Other
         </h1>
         <Link to={"category/automotive"} className="sidebar-category group">

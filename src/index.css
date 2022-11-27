@@ -25,6 +25,24 @@
   .home-cards-head {
     @apply text-[21px] font-bold mb-3 leading-[29px];
   }
+  .sidebar-category-head {
+    @apply text-[18px] font-bold pl-[36px] pt-[13px] pb-[5px];
+  }
+  .header-bottom {
+    @apply flex justify-between gap-x-1 items-center h-[39px] bg-gray text-white text-sm px-4;
+  }
+  .header-bottom-box {
+    @apply gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px];
+  }
+  .home-wt {
+    @apply text-[12px] w-[147px];
+  }
+  .home-wh {
+    @apply w-[140px] h-[102px];
+  }
+  .hf-wf {
+    @apply h-full w-full;
+  }
 }
 
 .slick-next::before {

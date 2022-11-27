@@ -8,33 +8,33 @@ export default function Bottom() {
 
   return (
     <>
-      <div className="flex justify-between gap-x-1 items-center h-[39px] bg-gray text-white text-sm px-4">
+      <div className="header-bottom">
         <div className="flex gap-x-1 items-center">
           <div
             onClick={() => dispatch(showSidebar())}
-            className="cursor-pointer flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]"
+            className="cursor-pointer flex header-bottom-box"
           >
             <GiHamburgerMenu size={20} />
             <div className=" font-bold">All</div>
           </div>
-          <div className="hidden md:flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]">
+          <div className="hidden md:flex header-bottom-box">
             Today's Deals
           </div>
-          <div className="hidden md:flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]">
+          <div className="hidden md:flex header-bottom-box">
             Customer Service
           </div>
-          <div className="hidden md:flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]">
+          <div className="hidden md:flex header-bottom-box">
             Registry
           </div>
-          <div className="hidden md:flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]">
+          <div className="hidden md:flex header-bottom-box">
             Gift Card
           </div>
-          <div className="hidden md:flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px]">
+          <div className="hidden md:flex header-bottom-box">
             Sell
           </div>
         </div>
         <div>
-          <div className="flex gap-x-1 items-center h-7 border border-gray  hover:border-white rounded-sm py-2 px-[8px] font-bold">
+          <div className="flex header-bottom-box font-bold">
             Shop great deals now
           </div>
         </div>
