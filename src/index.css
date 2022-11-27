@@ -36,3 +36,7 @@
 .slick-slider {
   min-height: 600px;
 }
+.star-container svg {
+  stroke: #e08030;
+  stroke-width: 3px;
+}
