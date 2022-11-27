@@ -43,13 +43,15 @@ export default function Header() {
           <div className=" text-xs leading-none">Returns</div>
           <div className=" text-sm items-center font-bold">& Orders</div>
         </div>
-        <div className="flex items-end h-[50px] border border-black  hover:border-white rounded-sm px-2 py-2 relative">
-          <span className="text-orange text-[20px] leading-none font-bold absolute top-1 left-6 bg-black">
-            0
-          </span>
-          <FiShoppingCart size={35} />
-          <div className=" text-sm items-center font-bold">Cart</div>
-        </div>
+        <Link to="/basket">
+          <div className="flex items-end h-[50px] border border-black  hover:border-white rounded-sm px-2 py-2 relative">
+            <span className="text-orange text-[20px] leading-none font-bold absolute top-1 left-6 bg-black">
+              0
+            </span>
+            <FiShoppingCart size={35} />
+            <div className=" text-sm items-center font-bold">Cart</div>
+          </div>
+        </Link>
       </div>
 
       <Bottom />

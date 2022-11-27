@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
+import Basket from "./pages/Basket";
 import Category from "./pages/Category";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
         <Route path="category/:name" element={<Category />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
       <Footer />
     </div>
