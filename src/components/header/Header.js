@@ -17,7 +17,7 @@ export default function Header() {
             <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
           </div>
         </Link>
-        <div className="h-[50px] flex items-center border border-black  hover:border-white rounded-sm text-xs font-normal pl-[3px] pr-[9px] ">
+        <div className="h-[50px] hidden md:flex items-center border border-black  hover:border-white rounded-sm text-xs font-normal pl-[3px] pr-[9px] ">
           <HiOutlineLocationMarker size={19} className="mt-2 mr-[1px]" />
           <div>
             <p className="text-[#ccc]">Deliver to</p>
@@ -27,7 +27,7 @@ export default function Header() {
 
         <Search />
 
-        <div className="flex gap-x-1 items-end h-[50px] border border-black  hover:border-white rounded-sm px-[9px] pb-[11px]">
+        <div className="hidden md:flex gap-x-1 items-end h-[50px] border border-black  hover:border-white rounded-sm px-[9px] pb-[11px]">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg"
             className="w-[21px] h-4"
@@ -36,13 +36,15 @@ export default function Header() {
           <div className=" text-sm font-bold leading-none">EN</div>
           <AiFillCaretDown color="gray" size={10} />
         </div>
-        <div className="h-[50px] border border-black  hover:border-white rounded-sm flex flex-col justify-center px-2">
+
+        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex flex-col justify-center px-2">
           <div className=" text-xs leading-none">Hello, sign in</div>
           <div className=" text-sm flex items-center font-bold">
             Account & Lists <AiFillCaretDown color="gray" size={10} />
           </div>
         </div>
-        <div className="h-[50px] border border-black  hover:border-white rounded-sm flex flex-col justify-center px-2">
+
+        <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex flex-col justify-center px-2">
           <div className=" text-xs leading-none">Returns</div>
           <div className=" text-sm items-center font-bold">& Orders</div>
         </div>
