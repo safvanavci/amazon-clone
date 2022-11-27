@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Category() {
   return (
-    <div className="w-full h-[300px] grid grid-cols-2">
+    <div className="h3-wf  grid grid-cols-2">
       <Link to={"category/smartphones"}>
         <div className="home-wt">
           <img
