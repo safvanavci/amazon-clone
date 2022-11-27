@@ -18,7 +18,7 @@ export default function Category() {
   return (
     <div className="flex w-fit mx-auto py-5">
       {loader ? (
-        <div className="h-[550px] flex items-center">
+        <div className="h-[550px] fic">
           <div className="lds-spinner">
             <div></div>
             <div></div>

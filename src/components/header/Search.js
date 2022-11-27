@@ -37,7 +37,7 @@ export default function Search() {
           value={first}
           onChange={(e) => setfirst(e.target.value)}
         />
-        <div className="bg-[#f4bd6a] w-[45px] flex items-center justify-center hover:bg-orange">
+        <div className="bg-[#f4bd6a] w-[45px] fic justify-center hover:bg-orange">
           <BsSearch size={20} />
         </div>
       </div>

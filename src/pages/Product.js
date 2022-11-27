@@ -19,7 +19,7 @@ export default function Product() {
   return (
     <div className="max-w-[1464px] mx-auto py-[60px]">
       {loader ? (
-        <div className="h-[550px] flex items-center justify-center">
+        <div className="h-[550px] fic justify-center">
           <div className="lds-spinner">
             <div></div>
             <div></div>

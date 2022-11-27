@@ -25,7 +25,7 @@ export default function Basket() {
               }
               
 
-              <div className="flex items-center justify-end">
+              <div className="fic justify-end">
                 <p className="text-[18px]">Subtotal ({items.length} item): </p>
                 <p className="py-4 text-[18px] font-bold"> ${total}</p>
               </div>

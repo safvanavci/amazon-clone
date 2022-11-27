@@ -11,13 +11,13 @@ export default function Header() {
 
   return (
     <>
-      <div className="h-[60px] bg-black text-white flex gap-x-2 clear-both px-4 items-center">
+      <div className="h-[60px] bg-black text-white fic gap-x-2 clear-both px-4">
         <Link to="/">
-          <div className="w-[113px] h-[50px] flex  items-center border border-black  hover:border-white pt-[5px] pr-[10px] pl-[5px] rounded-sm  ">
+          <div className="w-[113px] h-[50px] fic border border-black  hover:border-white pt-[5px] pr-[10px] pl-[5px] rounded-sm  ">
             <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
           </div>
         </Link>
-        <div className="h-[50px] hidden md:flex items-center border border-black  hover:border-white rounded-sm text-xs font-normal pl-[3px] pr-[9px] ">
+        <div className="h-[50px] hidden md:flex  items-center border border-black  hover:border-white rounded-sm text-xs font-normal pl-[3px] pr-[9px] ">
           <HiOutlineLocationMarker size={19} className="mt-2 mr-[1px]" />
           <div>
             <p className="text-[#ccc]">Deliver to</p>
@@ -39,7 +39,7 @@ export default function Header() {
 
         <div className="h-[50px] border border-black  hover:border-white rounded-sm hidden md:flex  flex-col justify-center px-2">
           <div className=" text-xs leading-none">Hello, sign in</div>
-          <div className=" text-sm flex items-center font-bold">
+          <div className=" text-sm fic font-bold">
             Account & Lists <AiFillCaretDown color="gray" size={10} />
           </div>
         </div>

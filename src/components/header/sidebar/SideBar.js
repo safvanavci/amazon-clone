@@ -19,7 +19,7 @@ export default function SideBar() {
       <div
         className={`${side} fixed  w-[365px] h-screen z-50 top-0 bg-white transition-all duration-300`}
       >
-        <div className="bg-gray h-[50px] px-[36px] text-white flex gap-x-3 items-center cursor-pointer relative">
+        <div className="bg-gray h-[50px] px-[36px] text-white fic gap-x-3  cursor-pointer relative">
           <FaUserCircle size={27} />
           <div className=" font-bold text-xl">Hello, sign in</div>
           <AiOutlineClose

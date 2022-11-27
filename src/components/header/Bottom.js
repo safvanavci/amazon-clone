@@ -9,7 +9,7 @@ export default function Bottom() {
   return (
     <>
       <div className="header-bottom">
-        <div className="flex gap-x-1 items-center">
+        <div className="fic gap-x-1">
           <div
             onClick={() => dispatch(showSidebar())}
             className="cursor-pointer flex header-bottom-box"

@@ -18,7 +18,7 @@ export default function Items({item}) {
         <div className="p-4 text-[12px] flex-1">
           <h1 className="text-[18px]">{item.title}</h1>
           <p className=" text-[#2c7600]">In Stock</p>
-          <div className="flex items-center gap-x-1 py-2">
+          <div className="fic gap-x-1 py-2">
             <input type="checkbox" /> <span>This is a gift</span>
           </div>
 

@@ -14,7 +14,7 @@ export default function Footer() {
       >
         Back to top
       </button>
-      <div className="h-[100px] bg-[#232f3f] flex items-center justify-center">
+      <div className="h-[100px] bg-[#232f3f] fic justify-center">
         <div className="w-[76px] h-[23px]">
           <img src="https://i.hizliresim.com/4fsd5b2.png" alt="" />
         </div>

@@ -7,7 +7,7 @@ export default function Card() {
 
   return (
     <div className="w-[300px] h-[145px] bg-white ml-6 p-[20px]">
-      <div className="flex items-center h-2">
+      <div className="fic h-2">
         <p className="text-[18px]">Subtotal ({items.length} item): </p>
         <p className="py-4 text-[18px] font-bold"> ${total}</p>
       </div>

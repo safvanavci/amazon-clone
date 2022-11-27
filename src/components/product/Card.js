@@ -22,7 +22,7 @@ export default function Card({ datas }) {
         </p>
       </div>
 
-      <div className="flex items-center mb-[12px]">
+      <div className="fic mb-[12px]">
         <HiOutlineLocationMarker size={17} className="mr-[4px]" />
 
         <span className="text-[12px] text-[#317285]">Deliver to Turkey</span>

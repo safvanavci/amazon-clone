@@ -49,6 +49,9 @@
   .fc {
     @apply flex flex-col;
   }
+  .fic {
+    @apply flex items-center;
+  }
 }
 
 .slick-next::before {
