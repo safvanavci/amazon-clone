@@ -3,14 +3,19 @@ import { outlineShow } from "../../redux/slices/OutlineSlice";
 import { BsSearch } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Search() {
   const dispatch = useDispatch();
   const value = useSelector((state) => state.outline.value);
   const [first, setfirst] = useState("");
   const [datas, setDatas] = useState([]);
-
+  const location = useLocation()
+  
+ useEffect(() => {
+   setfirst("")
+ }, [location])
+ 
   useEffect(() => {
     axios
       .get(`https://dummyjson.com/products/search?q=${first}`)
@@ -47,7 +52,7 @@ export default function Search() {
         ) : (
           <div className="bg-white border-t">
             {datas?.map((data) => (
-              <Link to={`/product/${data.id}`} key={data.id} onClick={()=>setfirst("")}>
+              <Link to={`/product/${data.id}`} key={data.id}>
                 <div className="p-[7px] hover:bg-lightGray">{data.title}</div>
               </Link>
             ))}
