@@ -1,10 +1,14 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useDispatch } from "react-redux";
-import { addBasket,setQuantity } from "../../redux/slices/BasketSlice";
-export default function Card({ datas }) {
+import { addBasket, setQuantity } from "../../redux/slices/BasketSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-  const dispatch = useDispatch()
+export default function Card({ datas }) {
+  
+  const dispatch = useDispatch();
   const date = new Date();
+  const notify = () => toast.success("Product added to cart");
 
   return (
     <div className="w-[242px] h-fit border border-[#d5d9d9] rounded-md  px-[18px] py-[14px]">
@@ -34,7 +38,10 @@ export default function Card({ datas }) {
 
       <div className="relative text-[11px]">
         <span className=" absolute left-3 top-[2px]">Qty:</span>
-        <select onChange={(e) =>dispatch(setQuantity(e.target.value))} className="w-[67px] h-[20px] bg-lightGray text-right px-[4px] pb-[1px] rounded-md border border-[#d5d9d9] cursor-pointer">
+        <select
+          onChange={(e) => dispatch(setQuantity(e.target.value))}
+          className="w-[67px] h-[20px] bg-lightGray text-right px-[4px] pb-[1px] rounded-md border border-[#d5d9d9] cursor-pointer"
+        >
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -49,9 +56,27 @@ export default function Card({ datas }) {
       </div>
 
       <div className="py-[10px]">
-        <button className="w-full bg-[#f6d814] hover:bg-[#ecce10] h-[29px] rounded-full text-[14px] mb-[10px]" onClick={()=> dispatch(addBasket(datas))}>
+        <button
+          className="w-full bg-[#f6d814] hover:bg-[#ecce10] h-[29px] rounded-full text-[14px] mb-[10px]"
+          onClick={() => {
+            dispatch(addBasket(datas));
+            notify();
+          }}
+        >
           Add to Cart
         </button>
+        <ToastContainer
+          position="top-right"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
         <button className="w-full bg-[#f1a31e] hover:bg-[#dc9316] h-[29px] rounded-full text-[14px]">
           Buy Now
         </button>
