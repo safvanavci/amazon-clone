@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Product from "../components/category/Product";
+import Loader from "../components/loader/Loader";
 
 export default function Category() {
   const params = useParams();
@@ -19,20 +20,7 @@ export default function Category() {
     <div className="flex w-fit mx-auto py-5">
       {loader ? (
         <div className="h-[550px] fic">
-          <div className="lds-spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Loader/>
         </div>
       ) : (
         <div className="max-w-[1500px]">

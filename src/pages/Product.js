@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Content from "../components/product/Content";
 import Card from "../components/product/Card";
+import Loader from "../components/loader/Loader";
 
 export default function Product() {
   const params = useParams();
@@ -20,20 +21,7 @@ export default function Product() {
     <div className="max-w-[1464px] mx-auto py-[60px]">
       {loader ? (
         <div className="h-[550px] fic justify-center">
-          <div className="lds-spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Loader/>
         </div>
       ) : (
         <div className="flex flex-wrap">
