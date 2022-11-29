@@ -10,11 +10,14 @@ export default function Product() {
   const [datas, setDatas] = useState([]);
   const [loader, setLoader] = useState(true);
 
+  const getData = async () =>{
+    const datas = await axios.get(`https://dummyjson.com/products/${params.id}`)
+    setDatas(datas.data)
+    setLoader(false)
+  }
+
   useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/${params.id}`)
-      .then((res) => setDatas(res.data))
-      .finally(() => setLoader(false));
+    getData()
   }, [params.id]);
 
   return (

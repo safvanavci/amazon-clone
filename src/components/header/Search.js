@@ -7,29 +7,34 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Search() {
   const dispatch = useDispatch();
-  const location = useLocation()
+  const location = useLocation();
 
   const value = useSelector((state) => state.outline.value);
 
   const [first, setfirst] = useState("");
   const [datas, setDatas] = useState([]);
-  
- useEffect(() => {
-   setfirst("")
- }, [location])
- 
-  useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/search?q=${first}`)
-      .then((res) => setDatas(res.data.products));
-  }, [first]);
 
+  const getData = async () => {
+    const data = await axios.get(
+      `https://dummyjson.com/products/search?q=${first}`
+    );
+    setDatas(data.data.products);
+  };
   const outline = () => {
-    dispatch(outlineShow())
-  }
+    dispatch(outlineShow());
+  };
   const getValue = (e) => {
-    setfirst(e.target.value)
-  }
+    setfirst(e.target.value);
+  };
+
+  useEffect(() => {
+    setfirst("");
+  }, [location]);
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [first]);
 
   return (
     <div className="relative flex-1 ">

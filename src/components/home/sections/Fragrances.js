@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 export default function Fragrances() {
   const [datas, setDatas] = useState([]);
 
+  const getData = async () =>{
+    const datas = await axios.get("https://dummyjson.com/products/category/fragrances")
+    setDatas(datas.data.products)
+  }
+  
   useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/category/fragrances")
-      .then((res) => setDatas(res.data.products));
+    getData()
   }, []);
 
   return (

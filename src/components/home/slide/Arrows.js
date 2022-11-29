@@ -11,6 +11,7 @@ export function SampleNextArrow(props) {
     </button>
   );
 }
+
 export function SamplePrevArrow(props) {
   const { onClick } = props;
   return (

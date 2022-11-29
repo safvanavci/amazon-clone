@@ -9,11 +9,14 @@ export default function Category() {
   const [datas, setDatas] = useState([]);
   const [loader, setLoader] = useState(true);
 
+  const getData = async () =>{
+    const datas = await axios.get(`https://dummyjson.com/products/category/${params.name}`)
+    setDatas(datas.data.products)
+    setLoader(false)
+  }
+
   useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/category/${params.name}`)
-      .then((res) => setDatas(res.data.products))
-      .finally(() => setLoader(false));
+    getData()
   }, [params.name]);
 
   return (

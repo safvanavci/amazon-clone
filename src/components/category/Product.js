@@ -19,7 +19,7 @@ export default function Product({ data }) {
         <Link to={`/product/${data.id}`}>
           <p className="text-[16px] leading-[24px] hover:text-[#c45500]">
             {data.description}
-          </p>{" "}
+          </p>
         </Link>
         <StarRatings
           rating={data.rating}
