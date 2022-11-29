@@ -6,12 +6,16 @@ import SideBar from "./sidebar/SideBar";
 export default function Bottom() {
   const dispatch = useDispatch();
 
+  const handleSide = () => {
+    dispatch(showSidebar())
+  }
+
   return (
     <>
       <div className="header-bottom">
         <div className="fic gap-x-1">
           <div
-            onClick={() => dispatch(showSidebar())}
+            onClick={handleSide}
             className="cursor-pointer flex header-bottom-box"
           >
             <GiHamburgerMenu size={20} />
