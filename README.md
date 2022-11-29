@@ -7,6 +7,7 @@ I made e-commerce logic by cloning amazon.com using react and redux. There are c
 + Developed with ***React***
 + Used ***Redux*** for state management
 + Used ***Tailwind*** for styled
++ Work with ***API*** [dummyjson.com](https://dummyjson.com/)
 
 ## Demo
 You can visit [here](https://amazon-clone-git-main-safvanavci.vercel.app/)
