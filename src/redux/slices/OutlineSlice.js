@@ -7,9 +7,7 @@ export const OutlineSlice = createSlice({
   },
   reducers: {
     outlineShow: (state) => {
-      state.value === "border-transparan"
-        ? (state.value = "border-orange ")
-        : (state.value = "border-transparan");
+      state.value = state.value === "border-transparan" ? "border-orange " : "border-transparan";
     },
   },
 });

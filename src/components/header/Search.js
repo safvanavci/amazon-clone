@@ -7,10 +7,12 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Search() {
   const dispatch = useDispatch();
+  const location = useLocation()
+
   const value = useSelector((state) => state.outline.value);
+
   const [first, setfirst] = useState("");
   const [datas, setDatas] = useState([]);
-  const location = useLocation()
   
  useEffect(() => {
    setfirst("")
@@ -21,6 +23,13 @@ export default function Search() {
       .get(`https://dummyjson.com/products/search?q=${first}`)
       .then((res) => setDatas(res.data.products));
   }, [first]);
+
+  const outline = () => {
+    dispatch(outlineShow())
+  }
+  const getValue = (e) => {
+    setfirst(e.target.value)
+  }
 
   return (
     <div className="relative flex-1 ">
@@ -37,10 +46,10 @@ export default function Search() {
         <input
           type="text"
           className="peer hf-wf outline-none p-2"
-          onFocus={() => dispatch(outlineShow())}
-          onBlur={() => dispatch(outlineShow())}
+          onFocus={outline}
+          onBlur={outline}
           value={first}
-          onChange={(e) => setfirst(e.target.value)}
+          onChange={getValue}
         />
         <div className="bg-[#f4bd6a] w-[45px] fic justify-center hover:bg-orange">
           <BsSearch size={20} />

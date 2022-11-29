@@ -8,7 +8,14 @@ export default function Card({ datas }) {
   
   const dispatch = useDispatch();
   const date = new Date();
-  const notify = () => toast.success("Product added to cart");
+
+  const addToBasket = () => {
+    dispatch(addBasket(datas));
+    toast.success("Product added to cart")
+  }
+  const quantity = (e) =>{
+    dispatch(setQuantity(e.target.value))
+  }
 
   return (
     <div className="w-[242px] h-fit border border-[#d5d9d9] rounded-md  px-[18px] py-[14px]">
@@ -39,7 +46,7 @@ export default function Card({ datas }) {
       <div className="relative text-[11px]">
         <span className=" absolute left-3 top-[2px]">Qty:</span>
         <select
-          onChange={(e) => dispatch(setQuantity(e.target.value))}
+          onChange={quantity}
           className="w-[67px] h-[20px] bg-lightGray text-right px-[4px] pb-[1px] rounded-md border border-[#d5d9d9] cursor-pointer"
         >
           <option>1</option>
@@ -58,10 +65,7 @@ export default function Card({ datas }) {
       <div className="py-[10px]">
         <button
           className="w-full bg-[#f6d814] hover:bg-[#ecce10] h-[29px] rounded-full text-[14px] mb-[10px]"
-          onClick={() => {
-            dispatch(addBasket(datas));
-            notify();
-          }}
+          onClick={addToBasket}
         >
           Add to Cart
         </button>

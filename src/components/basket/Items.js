@@ -4,6 +4,10 @@ import { remove } from "../../redux/slices/BasketSlice";
 export default function Items({item}) {
   const dispatch =useDispatch()
 
+  const handleRemove = () =>{
+    dispatch(remove(item))
+  }
+  
   return (
 
       <div className="border-b border-lightGray flex ">
@@ -27,7 +31,7 @@ export default function Items({item}) {
               <span >Qty:{item.quantity}</span>
               
             </div>
-            <button className="text-green hover:underline" onClick={()=>dispatch(remove(item))}>Delete</button>
+            <button className="text-green hover:underline" onClick={handleRemove}>Delete</button>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import Cards from "../components/home/cards/Cards";
 import Sections from "../components/home/sections/Sections";
-import Slides from "../components/home/Slides";
+import Slides from "../components/home/slide/Slides";
 
 export default function Home() {
   return (
