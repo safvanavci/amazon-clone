@@ -10,7 +10,7 @@ I made e-commerce logic by cloning amazon.com using react and redux. There are c
 + Work with ***API*** [dummyjson.com](https://dummyjson.com/)
 
 ## Demo
-You can visit [here](https://amazon-clone-qnnlesfav-safvanavci.vercel.app/)
+You can visit [here](https://e-commerce-safvan-avci.vercel.app/)
 
 ![Screenshot 2022-11-28 at 09 56 14](https://user-images.githubusercontent.com/43886857/204213285-cd892d09-4143-4851-81a9-7a9c5c282d4b.png)
 
